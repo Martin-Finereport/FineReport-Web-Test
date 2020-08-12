@@ -1,0 +1,477 @@
+body{
+    color: white;
+
+}
+
+.clearfix{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.coronaBanner{
+    width: 100%;
+    height: 541px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/Beat_Corona/banner%20new.png");
+    background-position: top;
+}
+.coronaMainBG{
+    width:100%;
+    height:auto;
+    background:rgba(0,0,0,1);
+}
+.coronaMain{
+    padding-top: 40px;
+    width: 60%;
+    margin: 0 auto;
+}
+.coronaMain h3{
+    text-align: center;
+    font-weight:500;
+    font-size:32px;
+    color:rgba(255,255,255,1);
+    line-height:45px;
+
+}
+.coronaMainTop{
+    margin-top: 40px;
+}
+.coronaMainTopDataTitle{
+    width:100%;
+    height:60px;
+    line-height: 60px;
+    background:linear-gradient(270deg,rgba(38,229,255,1) 0%,rgba(65,73,255,1) 100%);
+    border-radius:8px;
+    text-align: center;
+}
+.coronaMainTopDataTitle p{
+    font-size:24px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+
+}
+.coronaMainTopDataBlock{
+    margin-top: 20px;
+}
+.coronaMainTopDataBlock ul li:nth-child(2n+1){
+    width: 49%;
+    float: left;
+    height:210px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+}
+.coronaMainTopDataBlock ul li:nth-child(2n){
+    width: 49%;
+    float: right;
+    height:210px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+}
+.coronaMainTopDataBlock ul li:nth-child(3){
+    margin-top: 20px;
+}
+.coronaMainTopDataBlock ul li:nth-child(4){
+    margin-top: 20px;
+}
+.coronaMainTopDataBlock img{
+    height: 144px;
+    width: 30%;
+    float: left;
+    margin-top: 34px;
+    margin-left: 24px;
+
+}
+.coronaMainTopDataBlockDetail{
+    height: inherit;
+
+}
+
+.coronaMainTopDataBlockDetailText{
+    color: #000;
+    float: right;
+
+    width: 60%;
+    margin-top: -140px;
+    margin-right: 10px;
+}
+.coronaMainTopScreenContentext span{
+    color:#FFA019;
+}
+.coronaMainTopDataBlockDetailText p:nth-child(1){
+    font-size:20px;
+    font-weight:700;
+    color:rgba(51,51,51,1);
+    line-height:28px;
+}
+
+.coronaMainTopScreenContentext2 ul{
+    margin-top: 16px;
+    line-height:22px;
+}
+.coronaMainTopDataBlockDetailText p:nth-child(2){
+    margin-top: 16px;
+    font-size:16px;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:22px;
+}
+
+.coronaMainTopScreen{
+    padding-top: 40px;
+}
+.coronaMainTopScreenContent{
+    margin-top: 20px;
+    width:100%;
+    height:316px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+}
+.coronaMainTopScreenContentext p:nth-child(1){
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.coronaMainTopScreenContentext p:nth-child(3){
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 24px;
+}
+.coronaMainTopScreenContentext p:nth-child(2n){
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 16px;
+}
+.coronaMainTopScreenContentext2 p:nth-child(3){
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.coronaMainTopVisual{
+    padding-top: 40px;
+}
+.coronaMainTopScreenContentImg{
+    width: 40%;
+    float: left;
+}
+.coronaMainTopScreenContentImg2{
+    width: 40%;
+    float: left;
+}
+.coronaMainTopScreenContentImg img{
+    width: 100%;
+    height: 316px;
+}
+.coronaMainTopScreenContentext{
+    float: right;
+    width: 60%;
+    color: black;
+    margin-top: 48px;
+}
+.coronaMainTopScreenContentImg2 img{
+    width: 80%;
+    height: 220px;
+    margin-top: 48px;
+    margin-left: 24px;
+}
+.coronaMainMiddle{
+    margin-top: 80px;
+}
+.coronaMiddleTrack{
+    margin-top: 40px;
+}
+.coronaMainMiddleDash{
+    margin-top: 20px;
+    width:100%;
+    height:404px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+    overflow: hidden;
+}
+.coronaMainMiddleBlock{
+    margin-top: 20px;
+    height: 250px;
+}
+.coronaMainMiddleBlockDetail1{
+    float: left;
+    width:49%;
+    height:250px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+}
+.coronaMainMiddleBlockDetail2{
+    float: right;
+    width:49%;
+    height:250px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+}
+.coronaMainMiddleBlockDetail1Img{
+    width: 40%;
+    height: 230px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.coronaMainMiddleBlockDetail1Img img{
+    width: 100%;
+    height: 230px;
+}
+.coronaMainMiddleBlockDetail1Text{
+    float: right;
+    width: 55%;
+    margin-top: 28px;
+}
+.coronaMainMiddleBlockDetail1Text p:nth-child(1){
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(51,51,51,1);
+    line-height: 28px;
+}
+.coronaMainMiddleBlockDetail1Text ul{
+    color: rgba(51,51,51,1);
+    line-height: 22px;
+    margin-top: 16px;
+}
+.coronaMainMiddleBlockDetail2 button, .coronaMainMiddleBlockDetail1 button{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(270deg,rgba(38,229,255,1) 0%,rgba(65,73,255,1) 100%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.coronaMainMiddleDashBox{
+    position: relative;
+    width: 80%;
+    height: 372px;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+
+}
+.coronaMainMiddleDash img{
+    width: 100%;
+    height: 372px;
+    transition: 1s;
+}
+
+.coronaMainBottom{
+    margin-top: 80px;
+    padding-bottom: 80px;
+
+}
+.coronaMainBottomContent{
+    margin-top: 40px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/Beat_Corona/Health-team-doctors-nurses-group-diverse@2x.png");
+    width:100%;
+    height:531px;
+    background-size: cover;
+    border-radius:8px;
+    overflow: hidden;
+}
+.coronaMainBottomContentLeft{
+    float: left;
+    width:300px;
+    height:467px;
+    margin-top: 32px;
+    margin-left: 32px;
+    background:rgba(2,5,81,1);
+    opacity:0.5;
+
+}
+.coronaMainBottomContentRight{
+    float: right;
+    width:300px;
+    margin-top: 32px;
+    margin-right: 32px;
+    height:467px;
+    background:rgba(2,5,81,1);
+    opacity:0.5;
+}
+.coronaBottomBG{
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/Beat_Corona/Fill%201%20Copy%202.png");
+    height: 273px;
+}
+.coronaBottom{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+}
+.coronaBottomContent h3{
+    font-size: 32px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    margin-bottom: 40px;
+}
+.coronaMainBottomContentText{
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.coronaMainBottomContentText p:nth-child(1){
+    font-size:60px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:84px;
+}
+.coronaMainBottomContentText p:nth-child(2){
+    font-size:32px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:45px;
+}
+.coronaMainBottomContentText p:nth-child(3){
+    padding-top: 18px;
+    text-align: left;
+
+}
+.coronaMainBottomContentText span{
+    color: #FFA019;
+}
+.coronaMainBottomContentText p:nth-child(4),
+.coronaMainBottomContentText p:nth-child(5),
+.coronaMainBottomContentText p:nth-child(6)
+{
+    padding-top: 16px;
+    text-align: justify;
+
+}
+.coronaBottomContent button{
+    height: 48px;
+    width: 90%;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(270deg,rgba(38,229,255,1) 0%,rgba(65,73,255,1) 100%);
+    border-radius: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+
+
+}
+.coronaMainMiddleBlockDetail2 a,
+.coronaBottomContent a,
+.coronaMainMiddleBlockDetail1 a
+{
+    display: inline-block;
+    width: 30%;
+
+}
+
+.coronaMainMiddleDashBox a:hover>img{
+    transform:scale(1.2);
+}
+.coronaMainMiddleDashBox a:hover .CoronaDashExploreMore{
+    background-color: #3852f5;
+
+}
+.CoronaDashExploreMore{
+    position: absolute;
+    width: 100px;
+    color: white;
+    top: 30%;
+    background-color: #333333;
+    left: 45%;
+    opacity: .74;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    border-radius: 100px;
+    border: 2px solid #ffff;
+    transition: 1s;
+}
+@media(max-width: 1300px){
+    .coronaMainBottom {
+        padding-top: 20px;
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    .coronaMainBottomContent{
+        height: 720px;
+    }
+    .coronaMainBottomContentLeft {
+        width: 90%;
+        float: none;
+        height: auto;
+        margin-top: 32px;
+        margin-left: 32px;
+        background: rgba(2,5,81,1);
+        opacity: 0.5;
+    }
+    .coronaMainBottomContentText {
+        padding-top: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 24px;
+    }
+    .coronaMainBottomContentRight {
+        width: 90%;
+        float: none;
+        height: auto;
+        margin-left: 32px;
+        margin-top: 32px;
+        margin-right: 32px;
+        background: rgba(2,5,81,1);
+        opacity: 0.5;
+    }
+    .coronaMainTopScreenContent {
+        margin-top: 20px;
+        width: 100%;
+        height: 700px;
+        background: rgba(255,255,255,1);
+        border-radius: 8px;
+    }
+    .coronaMainTopScreenContentext {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+        color: black;
+        margin-top: 48px;
+        padding-top: 40px;
+    }
+    .coronaMainTopScreenContentImg {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 80px;
+        float: none;
+    }
+    .coronaMainMiddleBlockDetail1 {
+        float: none;
+        width: 100%;
+        height: 250px;
+        background: rgba(255,255,255,1);
+        border-radius: 8px;
+    }
+    .coronaMainMiddleBlockDetail2 {
+        float: none;
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: rgba(255,255,255,1);
+        border-radius: 8px;
+    }
+    .coronaMainTopDataBlock ul li:nth-child(2n+1) {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+        height: 210px;
+        background: rgba(255,255,255,1);
+        border-radius: 8px;
+    }
+    .coronaMainTopDataBlock ul li:nth-child(2n) {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+        height: 210px;
+        background: rgba(255,255,255,1);
+        border-radius: 8px;
+    }
+
+}
+
+

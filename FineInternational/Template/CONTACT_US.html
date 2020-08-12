@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.finereport.com/en/wp-content/themes/Newweb/CSS/phone_flag.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="http://www.finereport.com/en/wp-content/themes/Newweb/menu.js"></script>
+    <style>
+        .intl-tel-input {
+            position: relative;
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+        .contact__banner{
+            background: url(https://www.finereport.com/jp/wp-content/themes/newsite/contactus.jpg) center center;
+            background-size: cover;
+            height: 200px;
+            margin-bottom: 50px;
+            color: #fff;
+            padding-top: 80px;
+        }
+        .col-sm-margin{
+            margin-right: 30px;
+        }
+        .col-md-4 h3, .col-sm h3 {
+            color: #15A3ED;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="container-fluid contact__banner">
+        <h1 class="text-center">Contact Us</h1>
+    </div>
+</section>
+
+<section>
+    <div class="container shadow p-3 mb-5 bg-white rounded">
+        <h2  class="text-center">Get a Price Quote</h2>
+        <form id="FormPricing" onsubmit="return false">
+            <div class="form-group">
+                <label for="inputName">Full Name</label>
+                <input type="text" class="form-control " id="inputName">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback ">
+                    Please provide a valid value.
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Business Email</label>
+                    <input type="email" class="form-control " id="inputEmail">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputNumber">Phone Number</label>
+                    <input type="number" class="form-control" id="inputNumber">
+                    <input class="form-control" style="display: none;" id="inputNumber2">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputJob">Job Function</label>
+                    <select class="form-control" id="inputJob">
+                        <option value="Executive">Executive</option>
+                        <option value="Finance and Accounting">Finance and Accounting</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="IT">IT</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Operations/Production">Operations/Production </option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCompany">Company</label>
+                    <input type="text" class="form-control" id="inputCompany">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputUsers">Number of Users</label>
+                    <select class="form-control" id="inputUsers">
+                        <option value="<10"><10</option>
+                        <option value="10-50">10-50</option>
+                        <option value="50-100">50-100</option>
+                        <option value="100+">100+</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputProject">Project Type</label>
+                    <select class="form-control" id="inputProject">
+                        <option value="Embedded Analytics">Embedded Analytics</option>
+                        <option value="Self Service BI">Self Service BI</option>
+                        <option value="Code Driven Analytics">Code Driven Analytics</option>
+                        <option value="Don't know yet">Don't know yet</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputTimeline">Project Timeline</label>
+                    <select class="form-control" id="inputTimeline">
+                        <option value="As soon as possible">As soon as possible</option>
+                        <option value="Within 3 Months">Within 3 Months</option>
+                        <option value="Within 6 Months">Within 6 Months</option>
+                        <option value="Over 6 Months">Over 6 Months</option>
+                        <option value="No Timeline Set">No Timeline Set</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputVolume">Data Volume</label>
+                    <select class="form-control" id="inputVolume">
+                        <option value="<10GB"><10GB</option>
+                        <option value="10-50GB">10-50GB</option>
+                        <option value="50-100GB">50-100GB</option>
+                        <option value="100-500GB">100-500GB</option>
+                        <option value="500GB-1TB">500GB-1TB</option>
+                        <option value="1TB+GB">1TB+GB</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback ">
+                        Please provide a valid value.
+                    </div>
+                </div>
+            </div>
+            <div class="text-center ">
+                <button type="submit" class="btn btn-primary btn-lg" onclick="PricingSubmit()" id="pricingButton">Submit</button>
+            </div>
+            <script>
+                var input = document.querySelector("#inputNumber");
+                var iti = window.intlTelInput(input, {
+                    utilsScript: "http://www.finereport.com/en/wp-content/themes/Newweb/utils.js",
+                });
+            </script>
+        </form>
+    </div>
+
+</section>
+
+
+<section >
+    <h1 style="display:none">Contact us | FineReport</h1>
+    <div class="container shadow p-3 mb-5 bg-white rounded" style="max-width: 80%;" >
+        <h2 class="text-center" >Global Branch Offices</h2>
+        <div class="row frbox" style="padding:0 80px;">
+
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Global</h3>
+                    <p>Business: international@fanruan.com<br>
+                        Support: support@fanruan.com
+                    </p>
+                                             
+                </div>
+                <div class="col-md-4">
+                    <h3>Japan</h3>
+                    <p>Address: 〒101-0024 5F,S-Glanz AKIHABARA, 1-7-2Gandaizumichou,Chiyodaku，Tokyo<br>
+                        TEL: (+81) 03-5817-8961<br>
+                        E-mail: japan@fanruan.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Korea</h3>
+                    <p>Address：#3010, O'biztower, 126, Beolmal-ro, Anyang, Gyeonggi-do<br>
+                    <p>TEL:(+82) 010-7274-5433 igkwon<br>
+                        E-mail: korea@fanruan.com
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Taiwan</h3>
+                    <p>Address：4F, No. 107, Zhongcheng Road, Tucheng District, New Taipei City<br>
+                        TEL: (+886) 0933-790886 Brian<br>
+                        E-mail: taiwan@fanruan.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Mainland China</h3>
+                    <p>Address: 9th Floor, Building 1, Longemont Yes Tower, No.399 Kaixuan Road, Changning District, Shanghai<br>
+                        TEL: (+86) 4008-5050-48 <br>
+                        E-mail: business@fanruan.com <br>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Hong Kong & Macau</h3>
+                    <p>Address: 9th Floor, Building 1, Longemont Yes Tower, No.399 Kaixuan Road, Changning District, Shanghai<br>
+                        TEL: (+86) 4008-5050-48 <br>
+                        E-mail: business@fanruan.com <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section >
+    <h2  class="text-center">Sales Representative</h2>
+    <div class="container" >
+        <div class="row">
+        <div class="col-sm shadow p-3 mb-5 bg-white rounded col-sm-margin">
+            <h3>Lewis Chou</h3>
+            <p>Region:APAC(Asia Pacific)</p>
+            <p>WhatsApp: (+86)151-9027-3827</p>
+            <p>E-mail: lewis@fanruan.com</p>
+        </div>
+        <div class="col-sm shadow p-3 mb-5 bg-white rounded col-sm-margin">
+            <h3>Will Wang</h3>
+            <p>Region: EMEA(Europe, Middle-East and Africa)</p>
+            <p>WhatsApp: (+86)183-9558-1665</p>
+            <p>E-mail: dekang.wang@fanruan.com</p>
+        </div>
+        <div class="col-sm shadow p-3 mb-5 bg-white rounded">
+            <h3>Twister Xin</h3>
+            <p>Region: AMER(North and South America)</p>
+            <p>WhatsApp: (+86)185-0214-5615</p>
+            <p>E-mail: twister@fanruan.com</p>
+        </div>
+        </div>
+    </div>
+</section>
+</body>
+
+
+<script src="http://www.finereport.com/en/js/medium-check.js"></script>
+<script src="http://www.finereport.com/en/js/common-v5.js"></script>
+
+
+<script>
+    function PricingSubmit() {
+
+        var name = document.getElementById("inputName");
+        var nameValue = name.value.trim();
+        var email = document.getElementById("inputEmail");
+        var emailValue = email.value.trim();
+        var phone = document.getElementById("inputNumber");
+        var phoneValue = phone.value.trim();
+        var job = document.getElementById("inputJob");
+        var jobValue = job.value.trim();
+        var company = document.getElementById("inputCompany");
+        var companyValue = company.value.trim();
+        var users = document.getElementById("inputUsers");
+        var usersValue = users.value.trim();
+        var project = document.getElementById("inputProject");
+        var projectValue = project.value.trim();
+        var timeline = document.getElementById("inputTimeline");
+        var timelineValue = timeline.value.trim();
+        var volume = document.getElementById("inputVolume");
+        var volumeValue = volume.value.trim();
+        var country = iti.getSelectedCountryData().name;
+        var a = document.getElementById('pricingButton');
+
+        if (checkInputs() == 9) {
+
+            var list = "&name=" + nameValue + "&email=" + emailValue + "&phone=" + phoneValue + "&job=" + jobValue + "&company=" + companyValue + "&users=" + usersValue + "&project=" + projectValue + "&timeline=" + timelineValue + "&volume=" + volumeValue + "&country=" + country;
+            alert(list);
+            if (nameValue != '') {
+                $.ajax({
+                    type: 'GET',
+                    async: true,
+                    dataType: 'json',
+                    cache: true,
+                    processData: false,
+                    contentType: false,
+                    url: "pricing_wechat.php5",
+                    data: list
+                })
+            }
+        } else {
+
+            a.setAttribute("disabled", true);
+            a.style.backgroundColor = 'grey';
+            a.style.cursor = 'not-allowed';
+
+        }
+    }
+
+
+
+
+    function setSuccessFor(input){
+        input.className = 'form-control is-valid';
+
+    }
+
+    function setErrorFor(input){
+        input.className = 'form-control is-invalid';
+    }
+
+    function setErrorForPhone(input){
+        input.className = 'form-control is-invalid';
+        var another = document.getElementById("inputNumber2");
+        another.className = 'form-control is-invalid';
+    }
+
+    function setSuccessForPhone(input){
+        input.className = 'form-control is-valid';
+        var another = document.getElementById("inputNumber2");
+        another.className = 'form-control is-valid'
+    }
+
+    var form_group = document.getElementsByClassName('form-group');
+    var form_control = document.getElementsByClassName('form-control');
+    var a = document.getElementById('pricingButton'); // pricingButton
+
+    window.onload = addevent();
+    function addevent() {
+        for (var i = 0; i < form_group.length; i++){
+
+            form_control[i].index = i;
+            form_control[i].onfocus = function () {//鼠标获焦事件，如果获焦后，将之前下方对的提示性文字隐藏，文本框变色
+                // 且将对应显示出的错误警告删除，也就是错误警告是动态创建和删除的
+                a.removeAttribute("disabled");
+                a.style.cursor = 'pointer';
+                a.style.backgroundColor='#007bff';
+                // a.setAttribute("disabled", false);
+            }
+            form_control[i].onblur= function () {
+                if (this.value == '') {
+                    if (this.index == 2) {
+                        setErrorForPhone(this)
+                    }
+                    else {
+                        setErrorFor(this);
+                    }
+
+                } else if (this.value != ' ') {
+                    if (this.index == 2) {
+                        setSuccessForPhone(this)
+                    }
+                    else {
+                        setSuccessFor(this);
+                    }
+
+                }
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+
+    function checkInputs() {
+        // trim to remove the whitespaces
+        //
+
+
+
+        var name = document.getElementById("inputName");
+        var nameValue = name.value.trim();
+        var email = document.getElementById("inputEmail");
+        var emailValue = email.value.trim();
+        var phone = document.getElementById("inputNumber");
+        var phoneValue = phone.value.trim();
+        var job = document.getElementById("inputJob");
+        var jobValue = job.value.trim();
+        var company = document.getElementById("inputCompany");
+        var companyValue = company.value.trim();
+        var users = document.getElementById("inputUsers");
+        var usersValue = users.value.trim();
+        var project = document.getElementById("inputProject");
+        var projectValue = project.value.trim();
+        var timeline = document.getElementById("inputTimeline");
+        var timelineValue = timeline.value.trim();
+        var volume = document.getElementById("inputVolume");
+        var volumeValue = volume.value.trim();
+        var b=0;
+
+
+
+
+        if(nameValue === '') {
+            setErrorFor(name);
+
+        } else {
+            setSuccessFor(name);
+            b+=1;
+        }
+        if(emailValue === '') {
+            setErrorFor(email);
+
+        } else {
+            setSuccessFor(email);
+            b+=1;
+        }
+
+        if(phoneValue === ''){
+            setErrorForPhone(phone);
+        } else{
+            setSuccessForPhone(phone);
+            b+=1;
+        }
+
+
+
+
+
+        if(jobValue === '') {
+            setErrorFor(job);
+        } else {
+            setSuccessFor(job);
+            b+=1;
+        }
+
+        if(companyValue === '') {
+            setErrorFor(company);
+        } else {
+            setSuccessFor(company);
+            b+=1;
+        }
+
+        if(usersValue === '') {
+            setErrorFor(users);
+        } else {
+            setSuccessFor(users);
+            b+=1;
+        }
+
+        if(projectValue === '') {
+            setErrorFor(project);
+        } else {
+            setSuccessFor(project);
+            b+=1;
+        }
+
+        if(timelineValue === '') {
+            setErrorFor(timeline);
+        } else {
+            setSuccessFor(timeline);
+            b+=1;
+        }
+
+        if(volumeValue === '') {
+            setErrorFor(volume);
+        } else {
+            setSuccessFor(volume);
+            b+=1;
+        }
+
+
+
+
+
+        console.log(b);
+        return b;
+
+
+
+
+    }
+</script>
+</html>

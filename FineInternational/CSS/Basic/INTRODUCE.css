@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+
+/**********초기화값**********/
+body, h1, h2, h3,h4, p, ul, dl, dt, dd, li, a, span, i, input, textarea{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+ul li{ list-style: none; }
+a{ text-decoration: none;}
+hr {display: none;}
+.hidden{ position: absolute; left: -9999px;}
+address { font-style:normal; line-height: 30px;}
+small { font-size: 1em;}
+img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display:block; }
+table{
+    border-collapse: collapse;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.clear{
+    clear: both;
+}
+
+.col-1 {width: 8.33%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-2 {width: 16.66%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-3 {width: 25%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-4 {width: 33.33%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-5 {width: 41.66%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-6 {width: 50%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-7 {width: 58.33%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-8 {width: 66.66%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-9 {width: 75%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-10 {width: 83.33%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-11 {width: 91.66%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col-12 {width: 100%; float:left; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+
+
+
+input.frm_typeA { border: 0; display: block; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; -webkit-appearance: none; border-radius: 5px;  background: white; padding: 0 20px; height: 50px; line-height: 50px; color: black; font-size: 16px;}
+input.frm_typeA.placeholder { color: #aaa; }
+input.frm_typeA:-moz-placeholder { color: #aaa; }
+input.frm_typeA::-moz-placeholder { color: #aaa; }
+input.frm_typeA::-ms-input-placeholder { color: #aaa; }
+input.frm_typeA:-ms-input-placeholder { color: #aaa; }
+input.frm_typeA::-webkit-input-placeholder { color: #aaa; }
+input.frm_typeA::-webkit-input-placeholder { color: #aaa; }
+input.frm_typeA:focus { outline: none; }
+
+
+input.frm_typeB { border: 0; display: block; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; -webkit-appearance: none; border-radius: 5px;  background: #f3f3f3; padding: 0 14px; height: 40px; line-height:40px; color: black; font-size: 16px;}
+.frm_typeB.placeholder { color: #999999; }
+.frm_typeB:-moz-placeholder { color: #999999; }
+.frm_typeB::-moz-placeholder { color: #999999; }
+.frm_typeB::-ms-input-placeholder { color: #999999; }
+.frm_typeB:-ms-input-placeholder { color: #999999; }
+.frm_typeB::-webkit-input-placeholder { color: #999999; }
+.frm_typeB::-webkit-input-placeholder { color: #999999; }
+.frm_typeB:focus { outline: none; }
+
+textarea.frm_typeB{border: 0; display: block; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; -webkit-appearance: none; border-radius: 5px;  background: #f3f3f3; padding: 14px; color: black; font-size: 16px; height: 120px;}
+
+
+
+input.chk_type1 { display: block; position: absolute; opacity: 0; cursor: pointer;}
+input.chk_type1 + label { cursor: pointer; margin-bottom: 0 !important; font-size: 16px; color: #333333; letter-spacing: -0.05em;}
+input.chk_type1 + label span { display: inline-block; width: 15px; height: 15px; margin-right: 0px; background: url(../images/btn_chk_off.png) no-repeat center center; vertical-align: -2px; cursor: pointer; margin-right: 5px; background-size: 15px; background-color: white; }
+input.chk_type1:checked + label span { background: url(../images/btn_chk_on.png) no-repeat center center; background-size: 15px; background-color: white; }
+
+
+@media all and (max-width:768px){
+    input.chk_type1 + label{font-size: 14px;}
+    input.chk_type1 + label span{vertical-align: -3px;}
+    input.frm_typeA{font-size: 14px; height: 40px; line-height: 40px;}
+    input.frm_typeB{font-size: 14px; height: 40px; line-height: 40px;}
+}

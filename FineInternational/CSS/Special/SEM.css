@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.sem-banner{
+    height: 600px;
+    width: 100%;
+
+}
+.sem-banner-middle{
+    width: 40%;
+    padding-top: 10%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.sem-banner-shadow{
+    width:100%;
+    height:600px;
+    position:absolute;
+    z-index: 100;
+    background: url(http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/RECTANGLE.png) repeat;
+    background-size: 2px 2px;
+}
+.sem-banner-middle h1{
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.sem-banner-middle h2{
+    color: rgba(255,255,255,.75);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.sem-banner-middle h3{
+    color: white;
+}
+.sem-banner-middle p{
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+}
+.Explore-more{
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+
+}
+.Explore-more a{
+    display: inline-block;
+    margin: .5em 0;
+    padding: 13px 30px;
+    background-color: #ff6d02;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-size: 11px;
+    font-family: "Benton Sans Medium",Helvetica,sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.sem-banner-middle a {
+    display: inline-block;
+    margin: .5em 0;
+    padding: 13px 30px;
+    background-color: #ff6d02;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-size: 11px;
+    font-family: "Benton Sans Medium",Helvetica,sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+.sem-banner-movie{
+    width:100%;
+    height:600px;
+    position: absolute;
+    z-index: 0;
+    object-fit: fill;
+    margin: 0 auto;
+    padding: 0;
+
+}
+.sem-middle-wrap{
+    background-color: #f2f3f4;
+}
+
+
+.sem-middle{
+    margin: 0 auto 8% auto;
+    width: 80%;
+
+
+}
+.sem-middle h3{
+    padding-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sem-middle-row{
+    margin-bottom: 100px;
+}
+.sem-middle-row-add{
+    padding-bottom: 150px;
+}
+.sem-middle-col{
+    margin-left: 5%;
+}
+
+.sem-middle-row-img{
+    width: 640px;
+    height: 360px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+.sem-middle-row-p{
+    font-size: 25px;
+    color: #333;
+    font-weight: bold;
+    line-height: 36px;
+}
+.sem-icon{
+    width: 100%;
+
+
+}
+.sem-icon h3{
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sem-icon h4{
+    line-height: 1em;
+    font-size: 15px;
+    height: 52px;
+}
+.sem-icon li{
+    float: left;
+    width: 20%;
+    height: 100px;
+    margin-right: 5%;
+    text-align: center;
+
+}
+
+.sem-icon-inner{
+    margin: 0 15%;
+    height: 100%;
+}
+.sem-icon-inner ul{
+    height: 220px;
+}
+
+.sem-3D-farther h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sem-3D-line{
+    width: 200px;
+    border-top: 2px solid blue;
+    margin: 0 auto;
+}
+
+section.sem-3D{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin:100px auto;
+
+    transform-style: preserve-3d;
+    animation: rotate 18s linear infinite;
+    transition: all 2s;
+    /*transform-style: preserve-3d;*/
+
+
+}
+@keyframes rotate {
+    0%{
+        transform: rotateY(0);
+
+    }
+    100%{
+        transform: rotateY(360deg);
+
+    }
+
+}
+section div.dashboard1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-size: 400px 300px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/1.png") ;
+
+}
+section div.dashboard2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-size: 400px 300px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/2.png") ;
+
+}
+section div.dashboard3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-size: 400px 300px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/3.png") ;
+
+}
+section div.dashboard4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-size: 400px 300px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/4.png") ;
+
+}
+section div.dashboard5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-size: 400px 300px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/5.png") ;
+
+}
+.sem-3D-farther{
+    text-align:center;
+    perspective: 1000px;
+}
+section div.dashboard6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-size: 400px 300px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/6.png") ;
+
+}
+.sem-3D div:nth-child(1){
+    transform: translateZ(400px);
+}
+.sem-3D div:nth-child(2){
+    transform: rotateY(60deg) translateZ(400px);
+}
+.sem-3D div:nth-child(3){
+    transform: rotateY(120deg) translateZ(400px);
+}
+.sem-3D div:nth-child(4){
+    transform: rotateY(180deg) translateZ(400px);
+}
+.sem-3D div:nth-child(5){
+    transform: rotateY(240deg) translateZ(400px);
+}
+.sem-3D div:nth-child(6){
+    transform: rotateY(300deg) translateZ(400px);
+}
+
+.sem-customer{
+    margin-top: 220px;
+
+    text-align: center;
+    height: 520px;
+    background-image: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/bottom%20banner.png");
+
+}
+.img-responsive {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+.sem-customer h3{
+    padding-top: 30px;
+    font-size: 3rem;
+    color: white;
+
+
+}
+.sem-customer p{
+    color: white;
+    margin-bottom: 40px;
+}
+
+.sem-freetrial{
+    height: 200px;
+
+    text-align: center;
+    background: url("http://www.finereport.com/en/wp-content/themes/Newweb/images/SEM/bottom-banner.png") ;
+}
+.sem-freetrial h5{
+    padding-top: 50px;
+    font-size: 24px;
+}
+.sem-freetrial span{
+    color: blue;
+}
+.sem-bottom-button{
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-top: 30px;
+}
+.sem-bottom-button p{
+    float: left;
+    margin-right: 10%;
+}
+.sem-bottom-button-a{
+    display: inline-block;
+    margin: .5em 0;
+    padding: 13px 30px;
+    background-color: #ff6d02;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-size: 11px;
+    font-family: "Benton Sans Medium",Helvetica,sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+@media (max-width: 1200px){
+    .sem-icon li{
+        float: left;
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        margin-top: 10px;
+        text-align: center;
+
+    }
+    .sem-3D-farther{
+        perspective: none;
+    }
+    .sem-middle-col{
+        margin-bottom: 20px;
+    }
+
+
+
+}
+
+/*.sem-bottom-button p{*/
+/*margin-top: 10%;*/
+/*}*/
+/*.sem-bottom-button a{*/
+/*float: left;*/
+/*width: auto;*/
+/*margin-right: 5%;*/
+
+/*}*/
+
+
+

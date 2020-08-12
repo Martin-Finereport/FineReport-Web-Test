@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        /*reset css */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        a{
+            text-decoration: none !important;
+        }
+
+        /* make sure to set some focus styles for accessibility */
+        :focus {
+            outline: 0;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        input[type=search]::-webkit-search-cancel-button,
+        input[type=search]::-webkit-search-decoration,
+        input[type=search]::-webkit-search-results-button,
+        input[type=search]::-webkit-search-results-decoration {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        input[type=search] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        textarea {
+            overflow: auto;
+            vertical-align: top;
+            resize: vertical;
+        }
+
+        /**
+         * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+         */
+
+        audio,
+        canvas,
+        video {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            max-width: 100%;
+        }
+
+        /**
+         * Prevent modern browsers from displaying `audio` without controls.
+         * Remove excess height in iOS 5 devices.
+         */
+
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+
+        /**
+         * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+         * Known issue: no IE 6 support.
+         */
+
+        [hidden] {
+            display: none;
+        }
+
+        /**
+         * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+         *    `em` units.
+         * 2. Prevent iOS text size adjust after orientation change, without disabling
+         *    user zoom.
+         */
+
+        html {
+            font-size: 100%; /* 1 */
+            -webkit-text-size-adjust: 100%; /* 2 */
+            -ms-text-size-adjust: 100%; /* 2 */
+        }
+
+        /**
+         * Address `outline` inconsistency between Chrome and other browsers.
+         */
+
+        a:focus {
+            outline: thin dotted;
+        }
+
+        /**
+         * Improve readability when focused and also mouse hovered in all browsers.
+         */
+
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+
+        /**
+         * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+         * 2. Improve image quality when scaled in IE 7.
+         */
+
+        img {
+            border: 0; /* 1 */
+            -ms-interpolation-mode: bicubic; /* 2 */
+        }
+
+        /**
+         * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+         */
+
+        figure {
+            margin: 0;
+        }
+
+        /**
+         * Correct margin displayed oddly in IE 6/7.
+         */
+
+        form {
+            margin: 0;
+        }
+
+        /**
+         * Define consistent border, margin, and padding.
+         */
+
+        fieldset {
+            border: 1px solid #c0c0c0;
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+        }
+
+        /**
+         * 1. Correct color not being inherited in IE 6/7/8/9.
+         * 2. Correct text not wrapping in Firefox 3.
+         * 3. Correct alignment displayed oddly in IE 6/7.
+         */
+
+        legend {
+            border: 0; /* 1 */
+            padding: 0;
+            white-space: normal; /* 2 */
+            *margin-left: -7px; /* 3 */
+        }
+
+        /**
+         * 1. Correct font size not being inherited in all browsers.
+         * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+         *    and Chrome.
+         * 3. Improve appearance and consistency in all browsers.
+         */
+
+        button,
+        input,
+        select,
+        textarea {
+            font-size: 100%; /* 1 */
+            margin: 0; /* 2 */
+            vertical-align: baseline; /* 3 */
+            *vertical-align: middle; /* 3 */
+        }
+
+        /**
+         * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+         * the UA stylesheet.
+         */
+
+        button,
+        input {
+            line-height: normal;
+        }
+
+        /**
+         * Address inconsistent `text-transform` inheritance for `button` and `select`.
+         * All other form control elements do not inherit `text-transform` values.
+         * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+         * Correct `select` style inheritance in Firefox 4+ and Opera.
+         */
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        /**
+         * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+         *    and `video` controls.
+         * 2. Correct inability to style clickable `input` types in iOS.
+         * 3. Improve usability and consistency of cursor style between image-type
+         *    `input` and others.
+         * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+         *    Known issue: inner spacing remains in IE 6.
+         */
+
+        button,
+        html input[type="button"], /* 1 */
+        input[type="reset"],
+        input[type="submit"] {
+            -webkit-appearance: button; /* 2 */
+            cursor: pointer; /* 3 */
+            *overflow: visible;  /* 4 */
+        }
+
+        /**
+         * Re-set default cursor for disabled elements.
+         */
+
+        button[disabled],
+        html input[disabled] {
+            cursor: default;
+        }
+
+        /**
+         * 1. Address box sizing set to content-box in IE 8/9.
+         * 2. Remove excess padding in IE 8/9.
+         * 3. Remove excess padding in IE 7.
+         *    Known issue: excess padding remains in IE 6.
+         */
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box; /* 1 */
+            padding: 0; /* 2 */
+            *height: 13px; /* 3 */
+            *width: 13px; /* 3 */
+        }
+
+        /**
+         * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+         * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+         *    (include `-moz` to future-proof).
+         */
+
+        input[type="search"] {
+            -webkit-appearance: textfield; /* 1 */
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box; /* 2 */
+            box-sizing: content-box;
+        }
+
+        /**
+         * Remove inner padding and search cancel button in Safari 5 and Chrome
+         * on OS X.
+         */
+
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /**
+         * Remove inner padding and border in Firefox 3+.
+         */
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+
+        /**
+         * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+         * 2. Improve readability and alignment in all browsers.
+         */
+
+        textarea {
+            overflow: auto; /* 1 */
+            vertical-align: top; /* 2 */
+        }
+
+        /**
+         * Remove most spacing between table cells.
+         */
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        html,
+        button,
+        input,
+        select,
+        textarea {
+            color: #222;
+        }
+
+
+        ::-moz-selection {
+            background: #b3d4fc;
+            text-shadow: none;
+        }
+
+        ::selection {
+            background: #b3d4fc;
+            text-shadow: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .chromeframe {
+            margin: 0.2em 0;
+            background: #ccc;
+            color: #000;
+            padding: 0.2em 0;
+        }
+
+
+
+
+        .dropdown-menu a{
+            font-size: 16px;
+            color: #666;
+            clear: both;
+            font-weight: 400;
+            padding: 16px 20px;
+            line-height: 16px;
+            display: block;
+            min-width: 210px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        .nav-icon{margin-right: 25px;width: 24px;}
+        .dropdown-menu a:hover{background-color: #fff;}
+        .dropdown-menu>a:hover{transform: scale(1.05);transition: all .15s linear;border-color: rgba(3,27,78,.1);box-shadow: 0 2px 4px rgba(3,27,78,.06);}
+        .dropdown-menu {
+            border-radius: 4px;
+            padding: 0;
+            border: 0;
+            box-shadow: 0 8px 8px rgba(0,40,80,0.20);
+
+        }
+        .dropdown-menu {
+            margin-top: 9px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        *, ::after, ::before {
+            box-sizing: content-box;
+        }
+        /*change bootstrap css setting */
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav .nav-link {
+                padding-right: 0.7rem;
+                padding-left: 0.7rem;
+            }
+        }
+        @media screen and (max-width: 1200px) and (min-width: 992px) {
+            .container{
+                display: block !important;
+            }
+            .collapse.navbar-collapse button{
+                display: none;
+                
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .collapse.navbar-collapse button{
+                display: none;
+
+            }
+
+        }
+
+        /*common*/
+        .basic__main-container{
+            margin-top: 60px;
+        }
+        @media screen and (max-width: 1200px) and (min-width: 992px){
+            .basic__main-container{
+                margin-top: 100px;
+            }
+        }
+        section {
+            padding: 50px 0;
+        }
+        .basic__p{
+            font-size: 16px;
+            line-height: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .frhvr-shadow {
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: none;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform, box-shadow;
+            transition-property: transform, box-shadow;
+        }
+        .frhvr-shadow:hover {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px #D1EBFC;
+            -webkit-box-shadow: 0 6px 20px #D1EBFC;
+        }
+
+
+        /*index*/
+
+        /*h的大小到底多大*/
+
+        .index__banner{
+            height: 600px;
+            background: url('http://www.finereport.com/en/wp-content/themes/Newweb/images/index/banner.png') no-repeat center ;
+            background-size: cover;
+        }
+        .index__slogan-tit{
+            color: #fff;
+            font-size: 80px;
+            line-height: 80px;
+            margin-bottom: 30px;
+            letter-spacing: 10px;
+            margin-top: 50px;
+        }
+        .index__slogan-p1{
+            color: #fff;
+            font-size: 36px;
+            line-height: 36px;
+            margin-bottom: 70px;
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+        .basic__button--white{
+            color: #017ed3;
+            background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            width: 120px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 26px;
+            display: inline-block;
+            padding: 6px 12px;
+            user-select: none;
+        }
+        .basic__button--white:hover{
+            background-color: rgba(255, 255, 255, .8);
+            color: #2849F7;
+        }
+        .basic__button--white a{
+            color: #017ed3;
+        }
+        .basic__button--blue{
+            color: #fff;
+            background-color: #00000000;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            width: 120px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 26px;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+        }
+        .basic__button--blue:hover{
+            background-color: rgba(255, 255, 255, .3);
+            color: #fff;
+        }
+        .basic__button--blue a{
+            color: #fff;
+        }
+        .index__button--loc{
+            margin-right: 20px;
+        }
+        .index__intro{
+            color: #333;
+        }
+
+        .index__intro-tit{
+            margin-bottom: 50px;
+            font-size: 28px
+        }
+        .index__intro--s1p1{
+            font-size: 1.5rem;
+            margin-top: 4rem;
+            margin-bottom: 2.4rem;
+            font-weight: bold;
+        }
+        .index__endorse{
+            color: #fff;
+            background-image: url('http://www.finereport.com/en/wp-content/themes/Newweb/images/index/bg-middle.png');
+
+        }
+
+        .index__features ::after, ::before{
+            box-sizing: border-box;
+        }
+        .index__features-box{
+            float: left;
+            width: 33.3%;
+            cursor: pointer;
+            min-height: 242px;
+            border-radius: 2px;
+        }
+        .index__features-boxInner{
+            padding: 32px 32px 20px 32px;
+        }
+        .index__features--s1p1{
+            font-size: 20px;
+            font-weight: 700;
+            padding-top: 10px;
+            padding-left: 60px;
+
+        }
+        .index__features-header{
+            margin-bottom: 30px;
+        }
+        .index__features-learn{
+            margin-bottom: 10px;
+        }
+        .index__features-img{
+            float: left;
+            width: 50px;
+        }
+
+        .ew{
+            color: #3B5EFC;
+            padding-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <a class="navbar-brand" href="#"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/header_logo.png" alt="FineReport_LOGO" height="30"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Product
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a href="/en/download2"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/nav-icon-down.png" class="nav-icon">Download</a>
+
+                    <a href="/en/activation"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/nav-icon-active.png" class="nav-icon">Free Activation</a>
+                    <a href="/en/beat-corona-virus"><img src="https://www.finereport.com/images/nav-icon-heart.png" class="nav-icon">Beat COVID-19</a>
+                    <a href="https://endemo.finereport.com/webroot/decision" rel="nofollow"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/nav-icon-demo.png" class="nav-icon">Try Demo</a>
+                    <a href="https://www.finereport.com/en/releases" ><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/nav-icon-update.png" class="nav-icon">Release History</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Why FineReport</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Solutions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a href="/en/sales-dashboard"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/deploy-icon1.png" class="nav-icon">Sales-Dashboards</a>
+                    <a href="/en/iot-dashboards"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/mobile.png" class="nav-icon">Iot-Dashboards</a>
+                    <a href="/en/financial-dashboards"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/dashboard.png" class="nav-icon">Financial-Dashboards</a>
+    </div>
+        </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Features
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                    <a href="/en/features/report-designer"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/designer.png" class="nav-icon">FineReport Designer</a>
+                    <a href="/en/features/data-integration"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/integration.png" class="nav-icon">Data Intergration</a>
+                    <a href="/en/features/data-visualization"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/data%20visualization.png" class="nav-icon">Data Visualization</a>
+                    <a href="/en/features/data-entry"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/data%20entry.png" class="nav-icon">Data Entry</a>
+                    <a href="/en/features/decision-making-system"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/DMP.png" class="nav-icon">Decision-Making Platform</a>
+                    <a href="/en/features/deploy-and-integration"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/deploy-icon1.png" class="nav-icon">Deployment & Integration</a>
+                    <a href="/en/features/mobilebi"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/mobile.png" class="nav-icon">Mobile Application</a>
+                    <a href="/en/features/tv-dashboard"><img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/header/dashboard.png" class="nav-icon">Large Screen Dashboard</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a href="/en/learning-path">Learning Path</a>
+            <!-- 				<li><a href="/en/webinar">Webinar</a></li> -->
+                    <a href="/en/fr_webinar" >Online Webinar</a>
+                    <a href="http://doc.fanruan.com/display/VHD/FineReport" rel="nofollow">Help Document</a>
+                    <a href="/en/video-training" >Video Center</a>
+                    <a href="/en/blog" target="_blank">FineReport Blogs</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a href="/en/about-us" >About Us</a>
+                    <a href="/en/security" >Security</a>
+                    <a href="/en/contact-us" >Contact us</a>
+                    <a href="/en/partner-network" >Partner</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a href="http://www.finereport.com/">简体中文</a>
+                    <a href="http://www.finereport.com/en/">En</a>
+                    <a href="http://www.finereport.com/tw/">繁體中文</a>
+                    <a href="http://www.finereport.com/jp/">日本語</a>
+                    <a href="http://www.finereport.com/kr/">한국어</a>
+                    <a href="https://finereport.com/id/">bahasa Indonesia</a>
+                </div>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-primary">Try Now</button>
+    </div>
+
+
+
+    </div>
+
+</nav>
+
+
+<div class="basic__main-container">
+    <!--首页banner-->
+    <section class="index__banner">
+        <!--文字部分-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <h1 class="index__slogan-tit">FineReport</h1>
+                <p class="index__slogan-p1" style="margin-left: 4px;">BI Reporting & Dashboard Software</p>
+                    <button type="button" class="btn btn-primary btn-lg basic__button--white index__button--loc"><a href="https://endemo.finereport.com/webroot/decision">Try Demo</a></button>
+                    <button type="button" class="btn btn-primary btn-lg basic__button--white index__button--loc"><a href="https://endemo.finereport.com/webroot/decision">Learning Path</a></button>
+                    <button type="button" class="btn btn-primary btn-lg basic__button--blue"><a href="https://endemo.finereport.com/webroot/decision"> Watch Video</a></button>
+                </div>                                                                  
+            </div>
+        </div>
+        <!--文字部分结束-->
+    </section>
+    <!--首页banner结束-->
+
+
+    <section class="index__intro">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 ">
+                    <h2 class="index__intro-tit">FineReport For You</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm ">
+                    <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/For-Manager.png" alt="FineReport for Managers">
+                    <p class="index__intro--s1p1">For managers</p>
+                    <p class="basic__p top">Summarize business performance visually, effectively monitor ongoing operations, detect trends, and identify new business opportunities.</p>
+                </div>
+                <div class="col-sm ">
+                    <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/for-builder.png" alt="FineReport for Builders">
+                    <p class="index__intro--s1p1">For builders</p>
+                    <p class="basic__p top">Everyone can create reports or dashboards with stunning data visualization effect. Data entry function improves the efficiency of real-time data updating.</p>
+                </div>
+                <div class="col-sm">
+                    <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/for-it.png" alt="FineReport for IT">
+                    <p class="index__intro--s1p1">For IT staff</p>
+                    <p class="basic__p top">Simplify deployment and integration. Cut operation and maintenance costs.Open APIs make it   easy for IT staff to customize reporting systems.</p>                                                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section  class="index__endorse" >
+        <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12 ">
+                            <h2 class="index__intro-tit">FineReport---Best Reporting Software</h2>
+                        </div>
+                        <div class="col-sm">
+                            <img alt="FineReport-Top BI Solution Provider-IDC" style="display: inline; margin-top: 50px; margin-bottom: 20px" src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/IDC_LOGO.png">
+                            <h5>Best BI Solution Provider</h5>
+                        </div>
+                        <div class="col-sm">
+                            <svg style="height: 37px; margin-top: 50px; fill: #ffffff; margin-bottom: 15px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 54">
+                                <path d="M113.3 18.2c0-5.8.1-11.2.4-16.2L98.4 4.9v1.4l1.5.2c1.1.1 1.8.5 2.2 1.1.4.7.7 1.7.9 3.2.2 2.9.4 9.5.3 19.9 0 10.3-.1 16.8-.3 19.3 5.5 1.2 9.8 1.7 13 1.7 6 0 10.7-1.7 14.1-5.2 3.4-3.4 5.2-8.2 5.2-14.1 0-4.7-1.3-8.6-3.9-11.7-2.6-3.1-5.9-4.6-9.8-4.6-2.6 0-5.3.7-8.3 2.1zm.3 30.8c-.2-3.2-.4-12.8-.4-28.5.9-.3 2.1-.5 3.6-.5 2.4 0 4.3 1.2 5.7 3.7 1.4 2.5 2.1 5.5 2.1 9.3 0 4.7-.8 8.5-2.4 11.7-1.6 3.1-3.6 4.7-6.1 4.7-.8-.2-1.6-.3-2.5-.4zM41 3H1v2l2.1.2c1.6.3 2.7.9 3.4 1.8.7 1 1.1 2.6 1.2 4.8.8 10.8.8 20.9 0 30.2-.2 2.2-.6 3.8-1.2 4.8-.7 1-1.8 1.6-3.4 1.8l-2.1.3v2h25.8v-2l-2.7-.2c-1.6-.2-2.7-.9-3.4-1.8-.7-1-1.1-2.6-1.2-4.8-.3-4-.5-8.6-.5-13.7l5.4.1c2.9.1 4.9 2.3 5.9 6.7h2V18.9h-2c-1 4.3-2.9 6.5-5.9 6.6l-5.4.1c0-9 .2-15.4.5-19.3h7.9c5.6 0 9.4 3.6 11.6 10.8l2.4-.7L41 3zm-4.7 30.8c0 5.2 1.5 9.5 4.4 12.9 2.9 3.4 7.2 5 12.6 5s9.8-1.7 13-5.2c3.2-3.4 4.7-7.7 4.7-12.9s-1.5-9.5-4.4-12.9c-2.9-3.4-7.2-5-12.6-5s-9.8 1.7-13 5.2c-3.2 3.4-4.7 7.7-4.7 12.9zm22.3-11.4c1.2 2.9 1.7 6.7 1.7 11.3 0 10.6-2.2 15.8-6.5 15.8-2.2 0-3.9-1.5-5.1-4.5-1.2-3-1.7-6.8-1.7-11.3C47 23.2 49.2 18 53.5 18c2.2-.1 3.9 1.4 5.1 4.4zm84.5 24.3c3.3 3.3 7.5 5 12.5 5 3.1 0 5.8-.6 8.2-1.9 2.4-1.2 4.3-2.7 5.6-4.5l-1-1.2c-2.2 1.7-4.7 2.5-7.6 2.5-4 0-7.1-1.3-9.2-4-2.2-2.7-3.2-6.1-3-10.5H170c0-4.8-1.2-8.7-3.7-11.8-2.5-3-6-4.5-10.5-4.5-5.6 0-9.9 1.8-13 5.3-3.1 3.5-4.6 7.8-4.6 12.9 0 5.2 1.6 9.4 4.9 12.7zm7.4-25.1c1.1-2.4 2.5-3.6 4.4-3.6 3 0 4.5 3.8 4.5 11.5l-10.6.2c.1-3 .6-5.7 1.7-8.1zm46.4-4c-2.7-1.2-6.1-1.9-10.2-1.9-4.2 0-7.5 1.1-10 3.2s-3.8 4.7-3.8 7.8c0 2.7.8 4.8 2.3 6.3 1.5 1.5 3.9 2.8 7 3.9 2.8 1 4.8 2 5.8 2.9 1 1 1.6 2.1 1.6 3.6 0 1.4-.5 2.7-1.6 3.7-1 1.1-2.4 1.6-4.2 1.6-4.4 0-7.7-3.2-10-9.6l-1.7.5.4 10c3.6 1.4 7.6 2.1 12 2.1 4.6 0 8.1-1 10.7-3.1 2.6-2 3.9-4.9 3.9-8.5 0-2.4-.6-4.4-1.9-5.9-1.3-1.5-3.4-2.8-6.4-4-3.3-1.2-5.6-2.3-6.8-3.3-1.2-1-1.8-2.2-1.8-3.7s.4-2.7 1.3-3.7 2-1.4 3.4-1.4c4 0 6.9 2.9 8.7 8.6l1.7-.5-.4-8.6zm-96.2-.9c-1.4-.7-2.9-1-4.6-1-1.7 0-3.4.7-5.3 2.1-1.9 1.4-3.3 3.3-4.4 5.9l.1-8-15.2 3v1.4l1.5.1c1.9.2 3 1.7 3.2 4.4.6 6.2.6 12.8 0 19.8-.2 2.7-1.3 4.1-3.2 4.4l-1.5.2v1.9h21.2V49l-2.7-.2c-1.9-.2-3-1.7-3.2-4.4-.6-5.8-.7-12-.2-18.4.6-1 1.9-1.6 3.9-1.8 2-.2 4.3.4 6.7 1.8l3.7-9.3z">
+                                </path>
+                            </svg>
+                            <h5 >
+                                Top 50 Potential Chinese Unlisted Companies
+                            </h5>
+                        </div>
+                        <div class="col-sm">
+                            <img alt="FineReport-Enterprise Reporting Platforms-Gartner" style="display: inline; height: 37px; margin-top: 50px;margin-bottom: 20px " src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/gartner_logo.png">
+                            <h5>
+                                Enterprise Reporting Platforms
+                            </h5>
+                        </div>
+
+                    </div>
+        </div>
+
+    </section>
+
+    <section class="index__features">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="index__intro-tit">For Every Detail of Reporting and Dashboards </h2>
+                </div>
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix">
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/designer.png"  class="img-fluid index__features-img">
+                            <p class="index__features--s1p1"> Innovative Design Patterns</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">Anyone can build impressive reports and dashboards in 10 minutes with three reporting design patterns and drag&amp;drop ease.</p>
+                        </div>
+                        <a href="/en/features/report-designer" ><p class="index__features-learn">Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix">
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/integration.png"  class="img-fluid index__features-img">
+                            <p class="index__features--s1p1"> Fast Data Integration</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">Support all mainstream databases. In one click, you can combine data from multiple data sources to have a comprehensive analysis.</p>
+                        </div>
+                        <a href="/en/features/data-integration">
+                            <p class="index__features-learn">Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix">
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/data%20visualization.png"  class="img-fluid index__features-img">
+                            <p class="index__features--s1p1"> Cool Data Visualization</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">Provide 19 categories and over 50 styles of self-developed HTML5 charts,&nbsp;with cool 3D and dynamic effects.</p>
+                        </div>
+                        <a href="/en/features/data-visualization"><p class="index__features-learn">Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix">
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/data%20entry.png"  class="img-fluid index__features-img">
+                            <p class="index__features--s1p1"> Smart Data Entry</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">Rich controls make it easy to input massive data via forms, with thoughtful functions such as data validation and temporary storage.</p>
+                        </div>
+                        <a href="/en/features/data-entry"><p class="index__features-learn" >Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix" >
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/DMP.png"  class="img-fluid index__features-img">
+                            <p class="index__features--s1p1"> Powerful Desicion-Making System</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">The enterprise web reporting portal gives you a very secure environment for reports management, access controls, automated reporting, etc.</p>
+                        </div>
+                        <a href="/en/features/decision-making-system"><p class="index__features-learn" >Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix" >
+                            <img src="https://www.finereport.com/jp/wp-content/themes/newsite/deploy-icon1.png" class="img-fluid index__features-img" >
+                            <p class="index__features--s1p1"> Easy Deployment and Integration</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">Authentic Java reporting tool, simplifies integration with various systems seamlessly via independent or embedded deployment.</p>
+                        </div>
+                        <a href="/en/features/deploy-and-integration"><p class="index__features-learn">Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix" >
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/mobile.png" class="img-fluid index__features-img" >
+                            <p class="index__features--s1p1"> Convenient Mobile Applications</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">Only establish once, you can monitor your business performance and update your data anywhere, anytime, on any mobile device.</p>
+                        </div>
+                        <a href="/en/features/mobilebi"><p class="index__features-learn" >Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+                <div class="index__features-box frhvr-shadow">
+                    <div class="index__features-boxInner">
+                        <div class="index__features-header clearfix">
+                            <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/icon_new/dashboard.png" class="img-fluid index__features-img" >
+                            <p class="index__features--s1p1"> Large Screen &amp; TV Dashboard</p>
+                        </div>
+                        <div class="col-md-3-new">
+
+                            <p class="basic__p">On TV or other large screen dashboards, you can easily track KPIs and discover insights from multiple business systems such as ERP, OA, and MES.</p>
+                        </div>
+                        <a href="/en/features/tv-dashboard"><p class="index__features-learn">Learn more &gt; &gt;</p></a>
+                    </div>
+                </div>
+
+                <div class="index__features-box">
+                    <div class="index__features-boxInner">
+                    <img src="https://www.finereport.com/en/wp-content/themes/new_image0807/index-9.png" class="img-fluid" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="index__intro-tit">Reporting Solutions to Go Extra Mile</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 text-center swt-left">
+                    <a href="JavaScript:;" class="list-group-item swt-link active">IT</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Pharmaceuticals</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Banking</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Financial</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Chemistry</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Retail</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">E & E</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Fashion</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Real Estate</a>
+                    <a href="JavaScript:;" class="list-group-item swt-link">Internet</a>
+                </div>
+                <div class="col-md-9 swt-right">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">IT & Software</p>
+                                <p class="swt-text">
+                                    With the accumulation of practices and experience over past few years, we tailor professional solutions for the IT & software industry to help software companies meet project needs faster and better, raise efficiency, reduce costs and effectively enhance their competitiveness</p>
+                                </p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-it.jpg" class="img-responsive" alt="FineReport IT Solution">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-it.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Pharmaceuticals</p>
+                                <p class="swt-text">By deeply analyzing successful transformation cases of top 100 pharmaceutical companies, we provide pharmaceutical companies with sophisticated big data models and solutions. To help decision-making and operation control,support the construction and operation of KPI systems, strengthen company value chain management, raise operation efficiency and improve competitiveness</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-medical.jpg" class="img-responsive" alt="FineReport Medical Solution">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-medical.png" class="img-responsive solu-logoimg" alt="FineReport customers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Banking</p>
+                                <p class="swt-text">Focusing on the operation of the executive level, the business department and the technology information department, to webuild a commercial bank management reporting system. We provide a complete BI reporting solution that integrates data across multiple businesssystems and create the bank president management cockpit, customized reporting, self-service data analysis to help banks better operate businesses and make better decisions</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-bank.jpg" class="img-responsive" alt="FineReport Bank Solution">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-bank.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Securities & Fund</p>
+                                <p class="swt-text">We Integrate scattered data within the internal enterprise system, establish a scientific data growth indicator system, and design a BI reporting platform solution for daily needs and operational management requirements of the business department, which consists of three distinctive modules: Management Cockpit, Business Reports, and Topic Analysis</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-finance.jpg" class="img-responsive" alt="FineReport Finance Solution">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-finance.png" class="img-responsive solu-logoimg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Chemistry</p>
+                                                                                    <p class="swt-text">Considering the current status of chemicalcompanies, we sum up key topics and indicators of nine modules includingsales, production, finance and purchase at the business level; and we fully integrate FineReport with the companies’ existing information systems at the technical level, thereby forming a top-down integrated solution.</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-chemical.jpg" class="img-responsive" alt="FineReport Chemical Solution">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-chemical.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Retail</p>
+                                <p class="swt-text">
+                                    From the data logic to indicators, the indicator logic to content, the content logic to the topic, and the topic logic to management, we set up a BI reporting system which not only makes data visualized, but also makes data,business, and management closely correlated, so that the value of data tells its own tale.</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-retail.jpg" class="img-responsive" alt="Finereport retail solution">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-retail.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Electronic & Electric</p>
+                                <p class="swt-text">Combining with the theory of Lean Production Management, we provide visualization aids for the implementation of intelligent manufacturing, as well as powerful analysis tools for decision-making in business management. By integrating the data on production, supply, sales, research, finance,  and material, in the business module, we establish an efficient,  unified and, shared BI reporting platform for the electronic and electric industry</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-electric.jpg" class="img-responsive" alt="FineReport Electric Solution">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-electric.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Fashion</p>
+                                <p class="swt-text">Having been deeply committed to the fashion industry with meticulous efforts, we have accumulated abundant experience in integrating discrete business systems, unifying data resource pools and, designing data architecture. Wehelp fashion companies realize agile data interactive experience through FineReport’s market-driven, knowledge-based data mining and forecasting functions in response to a fast and flexible fashion market.</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-fashion.jpg" class="img-responsive" alt="FineReport Fashion Solution">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-fashion.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Real Estate</p>
+                                <p class="swt-text">
+                                    Relying on deep technical background and abundant experience in big data application, we provide mature big data-based real estate solutions targeting at the whole industry business chain and the complicated management requirements, so as to help executives have a clear insight into real estate projects, and monitor sales, business operation and financial situations. </p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-estate.png" class="img-responsive" alt="FineReport Estate Solution">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-estate.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 swt-right" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-5">
+                                <p class="swt-tit">Internet</p>
+                                <p class="swt-text">FineReport enables internet companies to carry out business analysis, indicator tracking, performance review and risk control, thereby reducing business management costs and enhancing the value of business data.</p>
+                                <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-solu-net.jpg" class="img-responsive" alt="FineReport Internet solution">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                                                                    <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-logo-net.png" class="img-responsive solu-logoimg" alt="FineReport Customers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cases">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="sec-tit">Practical Application Scenarios</h2>
+                </div>
+            </div>
+            <div class="row select text-center">
+                <div class="col-md-4 text-right ">
+                                                                        <a href="JavaScript:;" class="selectApp active" style="font-weight:bold">Business Management Cockpit</a>
+                </div>
+                <div class="col-md-4 ">
+                                                                        <a href="JavaScript:;" class="selectApp" style="font-weight:bold">Global Business Reporting System</a>
+                </div>
+                <div class="col-md-4 text-left">
+                                                                        <a href="JavaScript:;" class="selectApp" style="font-weight:bold">Multi-Source Data Correlation Analysis</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mainApp" style="display: block;">
+                    <div class="col-md-7">
+                        <div class="col-md-12 appImg">
+                            <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-case-p1.jpg" class="img-responsive" alt="FineReport Cases">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <p class="s4p1 hidden-xs">Tongjunge</p>
+                        <hr class="frline-blue hidden-xs">
+                        <p class="s4p2">Tong Jun Ge is a retail supplier specializing in the marketing, logistics, distribution, import and export of traditional Chinese herbs. Because of changes in management strategies, Tong Jun Ge is going to implement unified management over logistics and business data at the headquarters. Tong Jun Ge simulates management cockpit effects with FineReport’s dashboard to display key indicators from marketing analysis vividly on large screens.</p>
+                        <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                    </div>
+                </div>
+                <div class="mainApp" style="display: none;">
+                    <div class="col-md-7">
+                        <div class="col-md-12 appImg">
+                            <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-case-p2.jpg" class="img-responsive" alt="FineReport cases">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <p class="s4p1 hidden-xs">Taier</p>
+                        <hr class="frline-blue hidden-xs">
+                        <p class="s4p2">By integrating FineReport with its own information system, Tailer Heavy Industry Co., Ltd.has set up a series of business application systems for marketing, production management and financial management, and has formed a global data ecosystem. Take BOSS dashboard as an example. Using BOSS dashboard, executives can check the overall work schedule of three business segments (Taier Heavy Industry, 3D Printing and Shanghai RuiCong Network) on large screens and mobile phones to get a big picture of business operation anytime and anywhere.</p>
+                                                                 
+                        <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                    </div>
+                </div>
+                <div class="mainApp" style="display: none;">
+                    <div class="col-md-7">
+                        <div class="col-md-12 appImg">
+                            <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-case-p3.jpg" class="img-responsive" alt="FineReport Cases">
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <p class="s4p1 hidden-xs">BOSIDENG</p>
+                        <hr class="frline-blue hidden-xs">
+                        <p class="s4p2">BOSIDENG embeds FineReport entirely into store POS and directly displays the HANA data in the report by connecting FineReport to SAP HANA data warehouse. Product distribution and supply data on store POS are saved in separate databases. Taking advantage of FineReport's multi-source data connection function, BOSIDENG efficiently integrates the real-time data in the two databases.</p>
+                        <a href="/en/activation" class="btn frbtn-blue">Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="logos">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="sec-tit">FineReport is highly recognized by more than 11,000+ partners from 233 segment sectors</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/index/index-customer.png" class="img-responsive">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="frbot hidden-xs hidden-sm">
+        <div class="container">
+            <div class="col-md-4 col-md-offset-6 text-center">
+                <h2 class="sec-tit">Try FineReport Now, More Use Cases and Templates are Available.</h2>
+                <a href="/en/activation" class="btn frbtn-wht" style="margin-left: -200px";>FREE TRIAL</a>
+            </div>
+        </div>
+    </section>
+    <section class="bot-rec hidden-md hidden-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <a href="/en/activation">Try FineReport for free></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
