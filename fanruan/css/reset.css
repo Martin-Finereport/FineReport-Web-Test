@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* resets */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+i,
+em,
+s {
+  font-style: normal;
+}
+html,
+body {
+  font-size: 16px;
+  font-family: "Microsoft YaHei", "微软雅黑", Arial, Lucida Grande, Tahoma,
+    serif;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+img,
+input,
+button {
+  vertical-align: middle;
+  border: 0;
+}
+input {
+  background: none;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+th {
+  font-weight: 700;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+img {
+  max-width: 100%;
+}
+/* block */
+.block {
+  display: block;
+}
+
+/*float*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*ie6,7*/
+}
+.clear{
+  clear: both;
+}
+/* 超出隐藏(有些浏览器需加宽度起作用) */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+a {
+  color: black;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:focus,
+input,
+textarea,
+button {
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* reset */
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+/* 设置基本字体大小为16px 使用rem等比例缩放字体。防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  font-size: 16px;
+  color: #333;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 部分手机浏览器会出现此问题 */
+
+li,
+p,
+span,
+a {
+  max-height: 999999px;
+}
+
+/* 盒子模型 */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* html 响应式布局设定 */
+
+
+
+video{
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
